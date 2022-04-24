@@ -1,8 +1,8 @@
-const startBth  = document.querySelector("#start")
-const screens  = document.querySelectorAll(".screen")
-const timeList = document.querySelector("#time-list")
-const timeEl = document.querySelector("#time")
- const board = document.querySelector("#board")
+const startBth  = document.querySelector("#start");
+const screens  = document.querySelectorAll(".screen");
+const timeList = document.querySelector("#time-list");
+const timeEl = document.querySelector("#time");
+ const board = document.querySelector("#board");
 
  //создаем массив с цвветовой гамой
  const colors = ['#6fa2dd', '#996fdd', '#dd6fdd', '#d8565d', 
@@ -45,7 +45,7 @@ function startGame(){
 
 function decreateTime (){
     if(time === 0){
-        finishGame()
+        finishGame();
     } else {
         let current = - -time;
         if(current < 10){
@@ -105,7 +105,7 @@ function getRandomColor() {
 
     //const index = Math.floor(Math.random() * colors.length);///1 вариант
 
-    const index = getRandomNumber(0,colors.legenth) //2 вариант
+    const index = getRandomNumber(0,colors.length - 1); //2 вариант
 
     //возвращаем массив с инлексом,тоесть цвет
     return colors[index];
